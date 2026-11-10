@@ -1,37 +1,88 @@
+/* Universal Selector */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CSS Variables */
+
 :root {
     --primary-color: darkblue;
     --secondary-color: white;
-    --border-color: black;
+    --border-color: #333;
     --text-color: #333;
     --background-color: #eee;
-    --main-image-width: 150px;
-    --aside-image-width: 200px;
+    --box-background-color: #f0f4f8;
+    --main-image-width: 200px;
     --standard-padding: 1rem;
 }
 
-nav {
+/* General Page Styling */
+
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(280px, 1fr);
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    max-width: 1500px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: white;
+}
+
+/* Header and Navigation */
+
+header {
+    grid-area: header;
     background-color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     padding: 10px;
+    min-height: 65px;
 }
 
 nav a {
     color: var(--secondary-color);
-    display: block;
-    padding: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Main Content */
+
+main {
+    grid-area: main;
+    width: 100%;
+    min-width: 0;
+    padding: 1rem;
 }
 
 h1 {
     color: var(--primary-color);
-}
-
-main {
-    max-width: 840px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    overflow-wrap: break-word;
 }
 
 main img {
@@ -39,35 +90,77 @@ main img {
     height: auto;
     border: 1px solid var(--border-color);
     padding: 2px;
-    box-shadow: 0 0 30px grey;
+    box-shadow: 0 0 15px gray;
     float: right;
+    margin: 0 0 1rem 1rem;
 }
 
+main p {
+    margin-bottom: 1rem;
+}
+
+/* Temple List */
+
+main ul {
+    clear: both;
+}
+
+main li {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+main li a {
+    color: var(--primary-color);
+}
+
+main li a:hover {
+    color: #555;
+}
+
+/* Aside */
+
 aside {
-    width: 20rem;
+    grid-area: aside;
+    width: auto;
+    min-width: 0;
+    margin: 1rem;
     text-align: center;
     position: relative;
+    align-self: start;
 }
 
 aside h2 {
     position: absolute;
-    top: 47px;
-    left: 150px;
+    top: 1.5rem;
+    left: 1rem;
+    right: 1rem;
+    color: white;
+    background-color: rgb(0 0 139 / 80%);
+    padding: 0.5rem;
+    z-index: 1;
 }
 
 aside img {
-    width: var(--aside-image-width);
+    width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto 1rem;
 }
 
-p {
-    padding: 0;
+aside p {
+    text-align: left;
 }
+
+/* Footer */
 
 footer {
+    grid-area: footer;
     margin-top: 1rem;
     border-top: 1px solid var(--text-color);
     text-align: center;
+    padding: 1rem;
+    background-color: var(--box-background-color);
 }
 
 /* Class Selectors */
@@ -76,6 +169,107 @@ footer {
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 1rem;
-    background-color: #ddd;
-    color: #000;
+    background-color: var(--box-background-color);
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 750px) {
+
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    main img {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+    }
+
+    aside {
+        margin: 1rem;
+    }
+
+    aside img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Final Visual Improvements */
+
+/* Navigation */
+
+nav {
+    min-height: 70px;
+}
+
+nav a {
+    font-size: 1.1rem;
+    padding: 15px 20px;
+}
+
+/* Main Heading */
+
+h1 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.3;
+}
+
+/* Introduction */
+
+main p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Temple Heading */
+
+.temple-heading {
+    color: darkblue;
+    font-size: 1.8rem;
+    margin: 1rem;
+    padding-left: 1rem;
+}
+
+/* Temple List */
+
+main ul.box {
+    padding: 1.5rem;
+    border: 2px solid darkblue;
+    border-radius: 8px;
+}
+
+main li {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Nigeria Section */
+
+aside.box {
+    border-radius: 5px;
+}
+
+aside p {
+    line-height: 1.7;
 }
