@@ -1,0 +1,168 @@
+/* CSS Variables */
+:root {
+    --primary-color: #14532d;
+    --secondary-color: #38bdf8;
+    --accent1-color: #1e293b;
+    --accent2-color: #f0fdf4;
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: #ffffff;
+}
+
+/* Header */
+header {
+    width: 840px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+/* Main and Footer Width */
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+
+    background-color: var(--accent1-color);
+    color: white;
+    opacity: 0.85;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    background-color: rgba(20, 83, 45, 0.9);
+    color: white;
+    padding: 20px;
+}
+
+/* Article Image */
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+    margin: 16px;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.history {
+    background-color: var(--accent2-color);
+}
+
+.adventures {
+    min-height: 100px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Social Media */
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+}
