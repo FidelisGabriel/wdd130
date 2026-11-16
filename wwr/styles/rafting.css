@@ -9,6 +9,8 @@
     --secondary-color: #ffffff;
     --text-color: #222222;
     --background-color: #ffffff;
+    --border-color: #cccccc;
+    --overlay-color: #1b3765d9;
 }
 
 /* GENERAL STYLING */
@@ -86,7 +88,7 @@ header nav a:hover {
     padding: 10px;
     text-align: center;
     color: var(--secondary-color);
-    background-color: rgb(27 55 101 / 85%);
+    background-color: var(--overlay-color);
     font-size: 2.5rem;
 }
 
@@ -94,18 +96,17 @@ header nav a:hover {
 
 .hero article {
     position: absolute;
-    bottom: 5%;
-    left: 2.5%;
-    width: 95%;
+    bottom: 3%;
+    left: 3%;
+    width: 94%;
     min-height: 140px;
-    padding: 15px;
-    background-color: rgb(27 55 101 / 85%);
+    padding: 10px;
+    background-color: var(--overlay-color);
     color: var(--secondary-color);
     overflow: auto;
 }
 
 .hero article p {
-    flex: 1;
     line-height: 1.5;
 }
 
@@ -174,7 +175,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid var(--border-color);
     padding: 15px;
     margin-top: 25px;
 }
@@ -249,7 +250,6 @@ footer .socialmedia img {
         width: 94%;
         bottom: 3%;
         padding: 10px;
-        gap: 10px;
     }
 
     .hero article p {
