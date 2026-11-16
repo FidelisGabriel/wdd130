@@ -1,5 +1,4 @@
 /* Universal Selector */
-
 * {
     margin: 0;
     padding: 0;
@@ -7,38 +6,37 @@
 }
 
 /* CSS Variables */
-
 :root {
-    --primary-color: darkblue;
+    --primary-color: #3676b2;
     --secondary-color: white;
-    --border-color: #333;
-    --text-color: #333;
+    --border-color: #999;
+    --text-color: #222;
     --background-color: #eee;
-    --box-background-color: #f0f4f8;
-    --main-image-width: 200px;
-    --standard-padding: 1rem;
+    --box-background-color: #eee;
+    --main-image-width: 95px;
 }
 
 /* General Page Styling */
-
 body {
     display: grid;
-    grid-template-columns: minmax(0, 2.2fr) minmax(280px, 1fr);
+    grid-template-columns: minmax(190px, 0.8fr) minmax(0, 1.2fr);
     grid-template-areas:
         "header header"
-        "main aside"
+        "aside main"
         "footer footer";
-    max-width: 1500px;
+
+    max-width: 900px;
     margin: 0 auto;
+
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 12px;
+    line-height: 1.3;
+
     color: var(--text-color);
     background-color: white;
 }
 
 /* Header and Navigation */
-
 header {
     grid-area: header;
     background-color: var(--primary-color);
@@ -47,18 +45,18 @@ header {
 nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px;
-    min-height: 65px;
+    min-height: 44px;
+    padding: 5px;
 }
 
 nav a {
     color: var(--secondary-color);
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 12px;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 12px;
 }
 
 nav a:hover {
@@ -68,50 +66,59 @@ nav a:hover {
 }
 
 /* Main Content */
-
 main {
     grid-area: main;
-    width: 100%;
     min-width: 0;
-    padding: 1rem;
+    padding: 2.5rem 1rem 1rem;
 }
 
 h1 {
     color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
     overflow-wrap: break-word;
 }
 
+/* Main Profile Image */
 main img {
     width: var(--main-image-width);
     height: auto;
     border: 1px solid var(--border-color);
     padding: 2px;
-    box-shadow: 0 0 15px gray;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
     float: right;
-    margin: 0 0 1rem 1rem;
+    margin: 0.2rem 0 0.8rem 0.8rem;
 }
 
 main p {
+    font-size: 11px;
+    line-height: 1.3;
     margin-bottom: 1rem;
 }
 
 /* Temple List */
-
 main ul {
     clear: both;
 }
 
+main ul.box {
+    margin: 1rem 0 0;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #ccc;
+    background-color: var(--box-background-color);
+}
+
 main li {
     margin-left: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.15rem;
+    font-size: 11px;
 }
 
 main li a {
-    color: var(--primary-color);
+    color: #1a0dab;
 }
 
 main li a:hover {
@@ -119,25 +126,30 @@ main li a:hover {
 }
 
 /* Aside */
-
 aside {
     grid-area: aside;
-    width: auto;
     min-width: 0;
-    margin: 1rem;
+    margin: 10px;
     text-align: center;
     position: relative;
     align-self: start;
 }
 
+aside.box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: var(--box-background-color);
+}
+
 aside h2 {
     position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-    right: 1rem;
-    color: white;
-    background-color: rgb(0 0 139 / 80%);
-    padding: 0.5rem;
+    top: 2.8rem;
+    left: 10px;
+    right: 10px;
+    color: #111;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 5px;
     z-index: 1;
 }
 
@@ -145,15 +157,17 @@ aside img {
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 1rem;
+    margin: 0 auto 10px;
 }
 
 aside p {
     text-align: left;
+    font-size: 11px;
+    line-height: 1.3;
+    padding: 0 5px;
 }
 
 /* Footer */
-
 footer {
     grid-area: footer;
     margin-top: 1rem;
@@ -164,19 +178,16 @@ footer {
 }
 
 /* Class Selectors */
-
 .box {
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 10%);
-    padding: 1rem;
+    margin: 10px;
+    border: 1px solid rgb(0 0 0 / 15%);
+    padding: 10px;
     background-color: var(--box-background-color);
     color: var(--text-color);
 }
 
 /* Responsive Design */
-
-@media screen and (max-width: 750px) {
-
+@media screen and (max-width: 520px) {
     body {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -195,77 +206,16 @@ footer {
         text-align: center;
     }
 
+    main {
+        padding: 1rem;
+    }
+
     h1 {
-        font-size: 1.8rem;
+        font-size: 18px;
     }
 
     main img {
-        float: none;
-        display: block;
-        margin: 1rem auto;
+        width: 120px;
+        float: right;
     }
-
-    aside {
-        margin: 1rem;
-    }
-
-    aside img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* Final Visual Improvements */
-
-nav {
-    min-height: 70px;
-}
-
-nav a {
-    font-size: 1.1rem;
-    padding: 15px 20px;
-}
-
-h1 {
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    line-height: 1.3;
-}
-
-/* Introduction */
-
-main p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-/* Temple Heading */
-
-.temple-heading {
-    color: darkblue;
-    font-size: 1.8rem;
-    margin: 1rem;
-    padding-left: 1rem;
-}
-
-/* Temple List */
-
-main ul.box {
-    padding: 1.5rem;
-    border: 2px solid darkblue;
-    border-radius: 8px;
-}
-
-main li {
-    font-size: 1.1rem;
-    margin-bottom: 0.7rem;
-}
-
-/* Nigeria Section */
-
-aside.box {
-    border-radius: 5px;
-}
-
-aside p {
-    line-height: 1.7;
 }
