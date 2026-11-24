@@ -1,3 +1,7 @@
+/* =========================================
+   GLOBAL STYLING
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +17,6 @@
     --overlay-color: #1b3765d9;
 }
 
-/* GENERAL STYLING */
-
 body {
     max-width: 1200px;
     margin: 0 auto;
@@ -26,7 +28,9 @@ body {
     background-color: var(--background-color);
 }
 
-/* HEADER - CSS GRID */
+/* =========================================
+   HEADER - CSS GRID
+========================================= */
 
 header {
     display: grid;
@@ -42,7 +46,9 @@ header > img {
     justify-self: center;
 }
 
-/* NAVIGATION - FLEXBOX */
+/* =========================================
+   NAVIGATION - FLEXBOX
+========================================= */
 
 header nav {
     display: flex;
@@ -63,7 +69,9 @@ header nav a:hover {
     background-color: var(--primary-color);
 }
 
-/* HERO SECTION */
+/* =========================================
+   HERO SECTION
+========================================= */
 
 .hero {
     position: relative;
@@ -90,7 +98,9 @@ header nav a:hover {
     font-size: 2.5rem;
 }
 
-/* HERO ARTICLE */
+/* =========================================
+   HERO ARTICLE
+========================================= */
 
 .hero article {
     position: absolute;
@@ -116,7 +126,9 @@ header nav a:hover {
     margin-left: 15px;
 }
 
-/* HISTORY SECTION */
+/* =========================================
+   HISTORY SECTION
+========================================= */
 
 .history {
     margin-bottom: 45px;
@@ -137,7 +149,9 @@ header nav a:hover {
     line-height: 1.5;
 }
 
-/* ADVENTURES SECTION */
+/* =========================================
+   ADVENTURES SECTION
+========================================= */
 
 .adventures {
     margin-bottom: 35px;
@@ -166,7 +180,9 @@ header nav a:hover {
     color: var(--primary-color);
 }
 
-/* FOOTER - FLEXBOX */
+/* =========================================
+   FOOTER - FLEXBOX
+========================================= */
 
 footer {
     display: flex;
@@ -182,7 +198,9 @@ footer p {
     margin: 0;
 }
 
-/* SOCIAL MEDIA */
+/* =========================================
+   SOCIAL MEDIA
+========================================= */
 
 footer .socialmedia {
     display: flex;
@@ -201,101 +219,26 @@ footer .socialmedia img {
     height: 40px;
 }
 
-/* RESPONSIVE DESIGN */
+/* =========================================
+   CONTACT PAGE
+========================================= */
 
-@media screen and (max-width: 800px) {
+/* CONTACT HEADER */
 
-    header {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    header nav {
-        flex-wrap: wrap;
-    }
-
-    .hero-image {
-        height: 500px;
-    }
-
-    .adventure-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (max-width: 550px) {
-
-    header nav {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    header nav a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-image {
-        height: 480px;
-    }
-
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero article {
-        left: 3%;
-        width: 94%;
-        bottom: 3%;
-        padding: 10px;
-    }
-
-    .hero article p {
-        font-size: 0.85rem;
-    }
-
-    .hero article img {
-        width: 85px;
-        height: 85px;
-    }
-
-    .history h2,
-    .adventures h2 {
-        font-size: 1.3rem;
-    }
-
-    .adventure-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer .socialmedia {
-        justify-content: center;
-    }
-}
-
-/* CONTACT PAGE */
-
-/* HEADER */
-
-header {
+.contact-page header {
     background-color: #d9c7fa;
     border: 1px solid #777;
     margin-top: 10px;
     min-height: 108px;
 }
 
-header > img {
+.contact-page header > img {
     width: 90px;
     height: 80px;
     object-fit: contain;
 }
 
-header nav a {
+.contact-page header nav a {
     border: 1px solid #777;
     background-color: white;
     text-align: center;
@@ -303,7 +246,7 @@ header nav a {
     font-size: 0.9rem;
 }
 
-header nav a:hover {
+.contact-page header nav a:hover {
     background-color: var(--primary-color);
     color: white;
 }
@@ -334,7 +277,7 @@ header nav a:hover {
     gap: 35px;
     align-items: center;
     padding: 0 5px;
-    margin: 0 0 20px;
+    margin-bottom: 20px;
 }
 
 .contact-map iframe {
@@ -409,6 +352,11 @@ header nav a:hover {
     padding: 0;
 }
 
+.purpose-row legend {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
 .purpose-row fieldset label {
     display: block;
     font-size: 0.8rem;
@@ -434,7 +382,7 @@ header nav a:hover {
     padding-top: 5px;
 }
 
-/* NEWSLETTER */
+/* NEWSLETTER CHECKBOX */
 
 .newsletter-option {
     margin: 5px 0;
@@ -511,9 +459,9 @@ header nav a:hover {
     color: #222;
 }
 
-/* FOOTER */
+/* CONTACT FOOTER */
 
-footer {
+.contact-page footer {
     background-color: #d9c7fa;
     border: 1px solid #777;
     margin-top: 5px;
@@ -521,12 +469,35 @@ footer {
     padding: 8px 15px;
 }
 
-footer .socialmedia img {
+.contact-page footer .socialmedia img {
     width: 28px;
     height: 28px;
 }
 
-/* RESPONSIVE CONTACT PAGE */
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 800px) {
+
+    header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
 
 @media screen and (max-width: 700px) {
 
@@ -551,6 +522,58 @@ footer .socialmedia img {
 }
 
 @media screen and (max-width: 550px) {
+
+    header nav {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    header nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        height: 480px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero article {
+        left: 3%;
+        width: 94%;
+        bottom: 3%;
+        padding: 10px;
+    }
+
+    .hero article p {
+        font-size: 0.85rem;
+    }
+
+    .hero article img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .history h2,
+    .adventures h2 {
+        font-size: 1.3rem;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .socialmedia {
+        justify-content: center;
+    }
 
     .contact-company h1 {
         font-size: 1.4rem;
