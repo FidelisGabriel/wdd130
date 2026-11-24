@@ -277,3 +277,300 @@ footer .socialmedia img {
         justify-content: center;
     }
 }
+
+/* CONTACT PAGE */
+
+/* HEADER */
+
+header {
+    background-color: #d9c7fa;
+    border: 1px solid #777;
+    margin-top: 10px;
+    min-height: 108px;
+}
+
+header > img {
+    width: 90px;
+    height: 80px;
+    object-fit: contain;
+}
+
+header nav a {
+    border: 1px solid #777;
+    background-color: white;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 0.9rem;
+}
+
+header nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* COMPANY INFORMATION */
+
+.contact-company {
+    text-align: center;
+    padding: 8px 10px 12px;
+}
+
+.contact-company h1 {
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+.contact-company p {
+    line-height: 1.3;
+    font-size: 0.9rem;
+}
+
+/* MAP AND FORM LAYOUT */
+
+.contact-main {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 35px;
+    align-items: center;
+    padding: 0 5px;
+    margin: 0 0 20px;
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
+    height: 248px;
+    border: 1px solid #ccc;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+    width: 100%;
+    padding: 0;
+    background-color: white;
+    border: none;
+    border-radius: 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.form-row > label,
+.form-row > span {
+    font-size: 0.85rem;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+    height: 26px;
+}
+
+.form-row textarea {
+    height: 50px;
+    resize: vertical;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+/* MESSAGE PURPOSE */
+
+.purpose-row {
+    align-items: start;
+    margin-top: 8px;
+}
+
+.purpose-row > span {
+    padding-top: 15px;
+}
+
+.purpose-row fieldset {
+    border: none;
+    padding: 0;
+}
+
+.purpose-row fieldset label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.purpose-row input[type="radio"] {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    accent-color: var(--primary-color);
+    vertical-align: middle;
+}
+
+/* MESSAGE FIELD */
+
+.message-row {
+    align-items: start;
+    margin-top: 10px;
+}
+
+.message-row > label {
+    padding-top: 5px;
+}
+
+/* NEWSLETTER */
+
+.newsletter-option {
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
+
+.newsletter-option input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    accent-color: var(--primary-color);
+    vertical-align: middle;
+}
+
+/* SUBMIT BUTTON */
+
+.contact-form button {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #eeeeee;
+    color: #222;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #d9c7fa;
+}
+
+/* EMPLOYEE SECTION */
+
+.employee-section {
+    background-color: #f5f5f5;
+    border: 1px solid #777;
+    margin: 20px 5px 5px;
+    padding: 5px 15px 12px;
+}
+
+.employee-section h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    padding: 0;
+    background: none;
+    color: #111;
+}
+
+.employee-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.employee-gallery figure {
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+.employee-gallery img {
+    width: 80px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.employee-gallery figcaption {
+    padding: 0;
+    font-size: 0.8rem;
+    color: #222;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #d9c7fa;
+    border: 1px solid #777;
+    margin-top: 5px;
+    min-height: 52px;
+    padding: 8px 15px;
+}
+
+footer .socialmedia img {
+    width: 28px;
+    height: 28px;
+}
+
+/* RESPONSIVE CONTACT PAGE */
+
+@media screen and (max-width: 700px) {
+
+    .contact-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-map iframe {
+        height: 250px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .employee-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .contact-company h1 {
+        font-size: 1.4rem;
+    }
+
+    .contact-main {
+        padding: 0 5px;
+    }
+
+    .form-row {
+        grid-template-columns: 75px 1fr;
+    }
+
+    .employee-gallery img {
+        width: 65px;
+        height: 60px;
+    }
+
+    .employee-gallery figcaption {
+        font-size: 0.7rem;
+    }
+
+}
