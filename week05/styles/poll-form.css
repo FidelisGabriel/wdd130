@@ -1,0 +1,161 @@
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 650px;
+}
+
+/* Main heading */
+h1 {
+    margin: 1rem;
+    font-size: 1.8rem;
+    color: navy;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: 0.5rem;
+    background-color: #eee;
+    display: grid;
+}
+
+/* Fieldset styling */
+fieldset {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+}
+
+/* Legend styling */
+legend {
+    padding: 0.5rem;
+    color: navy;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Form elements font */
+label,
+input,
+button,
+select,
+textarea {
+    font-family: Arial, sans-serif;
+}
+
+/* Label styling */
+label {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+/* Input, select and textarea styling */
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+
+/* Form item grid layout */
+.form-item {
+    display: grid;
+    align-items: center;
+}
+
+/* Wide label layout */
+.label-wide {
+    grid-template-columns: 3fr 1fr;
+    margin: 0.5rem 0;
+}
+
+/* Narrow label layout */
+.label-narrow {
+    grid-template-columns: 1fr 2fr;
+}
+
+/* Textarea styling */
+textarea {
+    resize: vertical;
+}
+
+/* Submit button styling */
+button {
+    margin: 1rem;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Button hover and keyboard focus */
+button:hover,
+button:focus-visible {
+    background-color: darkgreen;
+}
+
+/* Footer styling */
+footer {
+    margin: 1rem auto 0;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 500px) {
+
+    .label-narrow,
+    .label-wide {
+        grid-template-columns: 1fr;
+    }
+
+    label {
+        text-align: left;
+        padding: 0.3rem 0;
+    }
+
+    fieldset {
+        margin: 0.5rem;
+        padding: 0.75rem;
+    }
+}
