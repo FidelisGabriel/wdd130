@@ -1,0 +1,331 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #000080;
+    --secondary-color: #ffffff;
+    --text-color: #222222;
+    --background-color: #f4f4f4;
+    --border-color: #cccccc;
+    --form-background: #eeeeee;
+}
+
+/* Body Styling */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    padding: 25px;
+}
+
+/* Main Container */
+main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.quiz-icon {
+    color: #000000;
+    margin-right: 5px;
+}
+
+/* Form Styling */
+form {
+    background-color: var(--form-background);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 25px;
+}
+
+/* Question Container */
+.question {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+label span {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Input, Textarea and Select */
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #888888;
+    border-radius: 2px;
+    background-color: var(--secondary-color);
+}
+
+/* Input Focus */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* Dropdown */
+select {
+    cursor: pointer;
+}
+
+/* Code Example */
+.code-example {
+    max-width: 80%;
+    margin: 10px auto 18px;
+    padding: 18px;
+    background-color: #333333;
+    color: var(--secondary-color);
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.code-example code {
+    font-weight: bold;
+}
+
+/* Submit Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 9px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* Button Hover */
+button:hover {
+    background-color: #191970;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    .code-example {
+        max-width: 100%;
+    }
+}
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #000080;
+    --secondary-color: #ffffff;
+    --text-color: #222222;
+    --outer-background: #555555;
+    --form-background: #dddddd;
+    --border-color: #aaaaaa;
+    --success-color: #45d99b;
+}
+
+/* Body */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 7px;
+}
+
+/* Main Quiz Container */
+.quiz-container {
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 20px 22px 22px;
+    background-color: var(--outer-background);
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+/* Green Check Icon */
+.check-icon {
+    display: inline-block;
+    color: var(--success-color);
+    font-size: 19px;
+    margin-right: 5px;
+}
+
+/* Form */
+form {
+    background-color: var(--form-background);
+    padding: 30px 32px 12px;
+}
+
+/* Question Sections */
+.question {
+    margin-bottom: 29px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+label span {
+    font-weight: bold;
+}
+
+/* Input, Textarea and Select */
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: 7px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+/* Text Input */
+input[type="text"] {
+    height: 30px;
+}
+
+/* Textarea */
+textarea {
+    height: 39px;
+    resize: vertical;
+}
+
+/* Dropdown */
+select {
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Code Example */
+.code-example {
+    width: 90%;
+    margin: 8px auto 11px;
+    padding: 10px;
+    background-color: #000000;
+    color: var(--secondary-color);
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.code-example code {
+    font-weight: bold;
+}
+
+/* Number Input */
+input[type="number"] {
+    height: 30px;
+}
+
+/* Submit Button */
+button {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    padding: 7px 4px;
+    margin-top: 21px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+/* Button Hover */
+button:hover {
+    background-color: #191970;
+}
+
+/* Input Focus */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 360px) {
+
+    .quiz-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 17px;
+    }
+
+    form {
+        padding: 25px 20px 12px;
+    }
+
+    label {
+        font-size: 11px;
+    }
+}
